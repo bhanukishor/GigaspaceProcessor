@@ -36,6 +36,8 @@ public class SegClassChange implements Serializable{
 	private Boolean processed = false;
 
 	
+
+	
 	@SpaceId
 	public SegClassChangeId getId() {
 		return id;

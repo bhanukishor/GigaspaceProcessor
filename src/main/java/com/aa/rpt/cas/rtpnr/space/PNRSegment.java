@@ -215,6 +215,9 @@ public class PNRSegment implements Serializable{
 	
 	
 	
+	
+	
+	
 	@SpaceId
 	public PNRSegmentId getId() {
 		return id;

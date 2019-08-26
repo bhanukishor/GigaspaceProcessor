@@ -16,6 +16,9 @@ public class PNRSegmentId implements Serializable {
 	private Integer segFlightNumber=0;
 	private String segBoard;
 	private String segOff;
+	
+	
+	
 	public LocalDateTime getPnrCreateDateTime() {
 		return pnrCreateDateTime;
 	}
