@@ -16,7 +16,16 @@ public class PNRSegment implements Serializable{
 	 * 
 	 */
 	private static final long serialVersionUID = 4490540017968260274L;
-	PNRSegmentId id;
+	//PNRSegmentId id;
+
+	 String id;
+	
+	private LocalDateTime pnrCreateDateTime;
+	private String pnrLocator ;
+	private LocalDate segDepartureDate;
+	private Integer segFlightNumber=0;
+	private String segBoard;
+	private String segOff;
 	
 	//PNR Level Fields
 	private LocalDate pnrPurgeDate;
@@ -211,20 +220,213 @@ public class PNRSegment implements Serializable{
 	private Boolean segForcedPartialCancel=false;
 	private Boolean segTtyRejectAgent=false;
 	private Boolean segTtyTransaction=false;
-
 	
 	
-	
-	
-	
-	
-	@SpaceId
-	public PNRSegmentId getId() {
+	@SpaceId(autoGenerate = true)	
+	public String getId() {
 		return id;
 	}
-	public void setId(PNRSegmentId id) {
+	public void setId(String id) {
 		this.id = id;
 	}
+	
+	
+	
+	
+	public LocalDateTime getPnrCreateDateTime() {
+		return pnrCreateDateTime;
+	}
+	public void setPnrCreateDateTime(LocalDateTime pnrCreateDateTime) {
+		this.pnrCreateDateTime = pnrCreateDateTime;
+	}
+	public String getPnrLocator() {
+		return pnrLocator;
+	}
+	public void setPnrLocator(String pnrLocator) {
+		this.pnrLocator = pnrLocator;
+	}
+	public LocalDate getSegDepartureDate() {
+		return segDepartureDate;
+	}
+	public void setSegDepartureDate(LocalDate segDepartureDate) {
+		this.segDepartureDate = segDepartureDate;
+	}
+	public Integer getSegFlightNumber() {
+		return segFlightNumber;
+	}
+	public void setSegFlightNumber(Integer segFlightNumber) {
+		this.segFlightNumber = segFlightNumber;
+	}
+	public String getSegBoard() {
+		return segBoard;
+	}
+	public void setSegBoard(String segBoard) {
+		this.segBoard = segBoard;
+	}
+	public String getSegOff() {
+		return segOff;
+	}
+	public void setSegOff(String segOff) {
+		this.segOff = segOff;
+	}
+	public Boolean getPnrInfant() {
+		return pnrInfant;
+	}
+	public Boolean getPnrParentPnr() {
+		return pnrParentPnr;
+	}
+	public Boolean getPnrChildPnr() {
+		return pnrChildPnr;
+	}
+	public Boolean getPnrCodeShare() {
+		return pnrCodeShare;
+	}
+	public Boolean getPnrBlockSpaceRemark() {
+		return pnrBlockSpaceRemark;
+	}
+	public Boolean getPnrPlt() {
+		return pnrPlt;
+	}
+	public Boolean getPnrHistoryTruncated() {
+		return pnrHistoryTruncated;
+	}
+	public Boolean getPnrHistoryCorrupted() {
+		return pnrHistoryCorrupted;
+	}
+	public Boolean getPnrNonRev() {
+		return pnrNonRev;
+	}
+	public Boolean getPnrPositiveSpace() {
+		return pnrPositiveSpace;
+	}
+	public Boolean getPnrAwardBooking() {
+		return pnrAwardBooking;
+	}
+	public Boolean getPnrGovtFare() {
+		return pnrGovtFare;
+	}
+	public Boolean getPnrExtraSeat() {
+		return pnrExtraSeat;
+	}
+	public Boolean getPnrCabinBaggage() {
+		return pnrCabinBaggage;
+	}
+	public Boolean getPnrAirpass() {
+		return pnrAirpass;
+	}
+	public Boolean getPnrFqtuSSR() {
+		return pnrFqtuSSR;
+	}
+	public Boolean getPnrAutoReqOptOut() {
+		return pnrAutoReqOptOut;
+	}
+	public Boolean getPnrItinActiveInd() {
+		return pnrItinActiveInd;
+	}
+	public Boolean getPnrVcrInd() {
+		return pnrVcrInd;
+	}
+	public Boolean getPnrRmEstimateInd() {
+		return pnrRmEstimateInd;
+	}
+	public Boolean getPnrUmnrSSR() {
+		return pnrUmnrSSR;
+	}
+	public Boolean getPnrPetSSR() {
+		return pnrPetSSR;
+	}
+	public Boolean getSegActive() {
+		return segActive;
+	}
+	public Boolean getSegInbound() {
+		return segInbound;
+	}
+	public Boolean getSegOutbound() {
+		return segOutbound;
+	}
+	public Boolean getSegRoundRobinCity() {
+		return segRoundRobinCity;
+	}
+	public Boolean getSegCodeShare() {
+		return segCodeShare;
+	}
+	public Boolean getSegCopiedFromParent() {
+		return segCopiedFromParent;
+	}
+	public Boolean getSegMarriedSegment() {
+		return segMarriedSegment;
+	}
+	public Boolean getSegFqtuSSR() {
+		return segFqtuSSR;
+	}
+	public Boolean getSegIrssSSR() {
+		return segIrssSSR;
+	}
+	public Boolean getSegInline() {
+		return segInline;
+	}
+	public Boolean getSegOnline() {
+		return segOnline;
+	}
+	public Boolean getSegOffline() {
+		return segOffline;
+	}
+	public Boolean getSegRegularFareType() {
+		return segRegularFareType;
+	}
+	public Boolean getSegSponsorFareType() {
+		return segSponsorFareType;
+	}
+	public Boolean getSegDefaultFareType() {
+		return segDefaultFareType;
+	}
+	public Boolean getSegSponsorDefault() {
+		return segSponsorDefault;
+	}
+	public Boolean getSegHostDefault() {
+		return segHostDefault;
+	}
+	public Boolean getSegDefaultEvaluationType() {
+		return segDefaultEvaluationType;
+	}
+	public Boolean getSegSumOfLocals() {
+		return segSumOfLocals;
+	}
+	public Boolean getSegTrueOD() {
+		return segTrueOD;
+	}
+	public Boolean getSegLongestSegmentFare() {
+		return segLongestSegmentFare;
+	}
+	public Boolean getSegDominantSegmentFare() {
+		return segDominantSegmentFare;
+	}
+	public Boolean getSegLocal() {
+		return segLocal;
+	}
+	public Boolean getSegFinancial() {
+		return segFinancial;
+	}
+	public Boolean getSegPhysical() {
+		return segPhysical;
+	}
+	public Boolean getSegForcedSell() {
+		return segForcedSell;
+	}
+	public Boolean getSegSchedChg() {
+		return segSchedChg;
+	}
+	public Boolean getSegForcedPartialCancel() {
+		return segForcedPartialCancel;
+	}
+	public Boolean getSegTtyRejectAgent() {
+		return segTtyRejectAgent;
+	}
+	public Boolean getSegTtyTransaction() {
+		return segTtyTransaction;
+	}
+	
+	
 	/*
 	 * public LocalDateTime getPnrCreateDateTime() { return pnrCreateDateTime; } public
 	 * void setPnrCreateDateTime(LocalDateTime pnrCreateDateTime) {
@@ -1360,6 +1562,7 @@ public class PNRSegment implements Serializable{
 		this.segTtyTransaction = segTtyTransaction;
 	}
 	
+	
 
 	@Override
 	protected PNRSegment clone()
@@ -1367,16 +1570,16 @@ public class PNRSegment implements Serializable{
 
 		PNRSegment clon = new PNRSegment();
 		
-		PNRSegmentId id = new PNRSegmentId();
+		//PNRSegmentId id = new PNRSegmentId();
 		clon.setId(id);
 
 		//clon.setId(this.getId());
 		//clon.setPnr(this.getPnr());
 		//////
-		clon.getId().setSegFlightNumber(this.getId().getSegFlightNumber());
-		clon.getId().setSegBoard(this.getId().getSegBoard());
-		clon.getId().setSegOff(this.getId().getSegOff());
-		clon.getId().setSegDepartureDate(this.getId().getSegDepartureDate());
+		clon.setSegFlightNumber(this.getSegFlightNumber());
+		clon.setSegBoard(this.getSegBoard());
+		clon.setSegOff(this.getSegOff());
+		clon.setSegDepartureDate(this.getSegDepartureDate());
 		clon.setSegDepartureDateTime(this.getSegDepartureDateTime());
 		clon.setSegDepartureDateTimeGMT(this.getSegDepartureDateTimeGMT());
 		clon.setSegAirline(this.getSegAirline());
