@@ -40,7 +40,7 @@ public class PNRSegment implements Serializable{
 	private Character pnrGroupType=' ';
 	private Boolean pnrPlt=false;
 	private String pnrPrimaryName;
-	private int pnrSeqNumber=0;
+	private Integer pnrSeqNumber=0;
 	private String pnrAaaCityCode;
 	private String pnrHomeStationCityCode;
 	private String pnrCreateDutyCode;
@@ -102,8 +102,7 @@ public class PNRSegment implements Serializable{
 	private Boolean pnrUmnrSSR=false;
 	private Boolean pnrPetSSR=false;
 	
-	//Segment Level Fields	
-	private Long segId=0L;
+	
 	private String segAirline;
 	//private LocalDateTime segDepartureDate;
 	//private Integer segFlightNumber;
@@ -506,10 +505,10 @@ public class PNRSegment implements Serializable{
 	public void setPnrPrimaryName(String pnrPrimaryName) {
 		this.pnrPrimaryName = pnrPrimaryName;
 	}
-	public int getPnrSeqNumber() {
+	public Integer getPnrSeqNumber() {
 		return pnrSeqNumber;
 	}
-	public void setPnrSeqNumber(int pnrSeqNumber) {
+	public void setPnrSeqNumber(Integer pnrSeqNumber) {
 		this.pnrSeqNumber = pnrSeqNumber;
 	}
 	public String getPnrAaaCityCode() {
@@ -872,12 +871,7 @@ public class PNRSegment implements Serializable{
 	public void setPnrPetSSR(Boolean pnrPetSSR) {
 		this.pnrPetSSR = pnrPetSSR;
 	}
-	public Long getSegId() {
-		return segId;
-	}
-	public void setSegId(Long segId) {
-		this.segId = segId;
-	}
+
 	public String getSegAirline() {
 		return segAirline;
 	}
@@ -1695,32 +1689,423 @@ public class PNRSegment implements Serializable{
 		
 		return clon;
 	}
+	@Override
+	public String toString() {
+		StringBuilder builder = new StringBuilder();
+		builder.append("PNRSegment [id=");
+		builder.append(id);
+		builder.append(", pnrCreateDateTime=");
+		builder.append(pnrCreateDateTime);
+		builder.append(", pnrLocator=");
+		builder.append(pnrLocator);
+		builder.append(", segDepartureDate=");
+		builder.append(segDepartureDate);
+		builder.append(", segFlightNumber=");
+		builder.append(segFlightNumber);
+		builder.append(", segBoard=");
+		builder.append(segBoard);
+		builder.append(", segOff=");
+		builder.append(segOff);
+		builder.append(", segStatusCode=");
+		builder.append(segStatusCode);
+		builder.append(", segFareClass=");
+		builder.append(segFareClass);
+		builder.append(", segSequence=");
+		builder.append(", segActive=");
+		builder.append(segActive);
+		builder.append(segSequence);		
+		builder.append(", segOrigStatusCode=");
+		builder.append(segOrigStatusCode);
+		builder.append(", segCabinCode=");
+		builder.append(segCabinCode);
+		
+		
+		
+		
+		builder.append(", pnrSeqNumber=");
+		builder.append(pnrSeqNumber);
+		builder.append(", pnrPurgeDate=");
+		builder.append(pnrPurgeDate);
+		builder.append(", pnrInfant=");
+		builder.append(pnrInfant);
+		builder.append(", pnrParentPnr=");
+		builder.append(pnrParentPnr);
+		builder.append(", pnrChildPnr=");
+		builder.append(pnrChildPnr);
+		builder.append(", pnrTicketStatus=");
+		builder.append(pnrTicketStatus);
+		builder.append(", pnrCodeShare=");
+		builder.append(pnrCodeShare);
+		builder.append(", pnrBlockSpaceRemark=");
+		builder.append(pnrBlockSpaceRemark);
+		builder.append(", pnrCurrentHistorySeq=");
+		builder.append(pnrCurrentHistorySeq);
+		builder.append(", pnrPrimaryNameType=");
+		builder.append(pnrPrimaryNameType);
+		builder.append(", pnrGroupType=");
+		builder.append(pnrGroupType);
+		builder.append(", pnrPlt=");
+		builder.append(pnrPlt);
+		builder.append(", pnrPrimaryName=");
+		builder.append(pnrPrimaryName);
+		
+		builder.append(", pnrAaaCityCode=");
+		builder.append(pnrAaaCityCode);
+		builder.append(", pnrHomeStationCityCode=");
+		builder.append(pnrHomeStationCityCode);
+		builder.append(", pnrCreateDutyCode=");
+		builder.append(pnrCreateDutyCode);
+		builder.append(", pnrCreateAgentSine=");
+		builder.append(pnrCreateAgentSine);
+		builder.append(", pnrCreatePLTOfficeDesignator=");
+		builder.append(pnrCreatePLTOfficeDesignator);
+		builder.append(", pnrCreateCRSCode=");
+		builder.append(pnrCreateCRSCode);
+		builder.append(", pnrCreationCountryCode=");
+		builder.append(pnrCreationCountryCode);
+		builder.append(", pnrAgencyOwner=");
+		builder.append(pnrAgencyOwner);
+		builder.append(", pnrNumberInParty=");
+		builder.append(pnrNumberInParty);
+		builder.append(", pnrNumberOfInfants=");
+		builder.append(pnrNumberOfInfants);
+		builder.append(", pnrNumberInNames=");
+		builder.append(pnrNumberInNames);
+		builder.append(", pnrOrigNumberInNames=");
+		builder.append(pnrOrigNumberInNames);
+		builder.append(", pnrAadvantageCount=");
+		builder.append(pnrAadvantageCount);
+		builder.append(", pnrExecutivePlatinumCount=");
+		builder.append(pnrExecutivePlatinumCount);
+		builder.append(", pnrPlatinumCount=");
+		builder.append(pnrPlatinumCount);
+		builder.append(", pnrVipCount=");
+		builder.append(pnrVipCount);
+		builder.append(", pnrSeniorCitizenCount=");
+		builder.append(pnrSeniorCitizenCount);
+		builder.append(", pnrSeniorCitizenCompanionCount=");
+		builder.append(pnrSeniorCitizenCompanionCount);
+		builder.append(", pnrGoldCount=");
+		builder.append(pnrGoldCount);
+		builder.append(", pnrPlatinumProCount=");
+		builder.append(pnrPlatinumProCount);
+		builder.append(", pnrConciergeKeyCount=");
+		builder.append(pnrConciergeKeyCount);
+		builder.append(", pnrAirPassCount=");
+		builder.append(pnrAirPassCount);
+		builder.append(", pnrImmediateParentLocator=");
+		builder.append(pnrImmediateParentLocator);
+		builder.append(", pnrDivideDateTime=");
+		builder.append(pnrDivideDateTime);
+		builder.append(", pnrTicketInfo=");
+		builder.append(pnrTicketInfo);
+		builder.append(", pnrContractNumber=");
+		builder.append(pnrContractNumber);
+		builder.append(", pnrReceivedDateTime=");
+		builder.append(pnrReceivedDateTime);
+		builder.append(", pnrLastUpdateDateTime=");
+		builder.append(pnrLastUpdateDateTime);
+		builder.append(", pnrOrigBkgCRSCode=");
+		builder.append(pnrOrigBkgCRSCode);
+		builder.append(", pnrOrigBkgAgencyIATANumber=");
+		builder.append(pnrOrigBkgAgencyIATANumber);
+		builder.append(", pnrOrigBkgAgencyCityCode=");
+		builder.append(pnrOrigBkgAgencyCityCode);
+		builder.append(", pnrOrigBkgCountryCode=");
+		builder.append(pnrOrigBkgCountryCode);
+		builder.append(", pnrOrigBkgDutyCode=");
+		builder.append(pnrOrigBkgDutyCode);
+		builder.append(", pnrHistoryTruncated=");
+		builder.append(pnrHistoryTruncated);
+		builder.append(", pnrHistoryCorrupted=");
+		builder.append(pnrHistoryCorrupted);
+		builder.append(", pnrHistoryResetDate=");
+		builder.append(pnrHistoryResetDate);
+		builder.append(", pnrRlocText=");
+		builder.append(pnrRlocText);
+		builder.append(", pnrRlocCRSCityCode=");
+		builder.append(pnrRlocCRSCityCode);
+		builder.append(", pnrRlocCRSCode=");
+		builder.append(pnrRlocCRSCode);
+		builder.append(", pnrRlocOAPnrLocator=");
+		builder.append(pnrRlocOAPnrLocator);
+		builder.append(", pnrRlocAgencyIdCode=");
+		builder.append(pnrRlocAgencyIdCode);
+		builder.append(", pnrRlocAgencyIATANumber=");
+		builder.append(pnrRlocAgencyIATANumber);
+		builder.append(", pnrRlocAgencyCityCode=");
+		builder.append(pnrRlocAgencyCityCode);
+		builder.append(", pnrOrigParentLocator=");
+		builder.append(pnrOrigParentLocator);
+		builder.append(", pnrPointOfOriginCityCode=");
+		builder.append(pnrPointOfOriginCityCode);
+		builder.append(", pnrNonRev=");
+		builder.append(pnrNonRev);
+		builder.append(", pnrPositiveSpace=");
+		builder.append(pnrPositiveSpace);
+		builder.append(", pnrAwardBooking=");
+		builder.append(pnrAwardBooking);
+		builder.append(", pnrGovtFare=");
+		builder.append(pnrGovtFare);
+		builder.append(", pnrExtraSeat=");
+		builder.append(pnrExtraSeat);
+		builder.append(", pnrCabinBaggage=");
+		builder.append(pnrCabinBaggage);
+		builder.append(", pnrAirpass=");
+		builder.append(pnrAirpass);
+		builder.append(", pnrAirpassType=");
+		builder.append(pnrAirpassType);
+		builder.append(", pnrFqtuSSR=");
+		builder.append(pnrFqtuSSR);
+		builder.append(", pnrAutoReqOptOut=");
+		builder.append(pnrAutoReqOptOut);
+		builder.append(", pnrItinActiveInd=");
+		builder.append(pnrItinActiveInd);
+		builder.append(", pnrVcrInd=");
+		builder.append(pnrVcrInd);
+		builder.append(", pnrRmEstimateInd=");
+		builder.append(pnrRmEstimateInd);
+		builder.append(", pnrUmnrSSR=");
+		builder.append(pnrUmnrSSR);
+		builder.append(", pnrPetSSR=");
+		builder.append(pnrPetSSR);
+		builder.append(", segAirline=");
+		builder.append(segAirline);
+		builder.append(", segBoardCountryCode=");
+		builder.append(segBoardCountryCode);
+		builder.append(", segOffCountryCode=");
+		builder.append(segOffCountryCode);
+		
+		builder.append(", segInbound=");
+		builder.append(segInbound);
+		builder.append(", segOutbound=");
+		builder.append(segOutbound);
+		builder.append(", segSabreNumberInParty=");
+		builder.append(segSabreNumberInParty);
+		builder.append(", segOrigNumberInParty=");
+		builder.append(segOrigNumberInParty);
+		builder.append(", segPrevStatusCode=");
+		builder.append(segPrevStatusCode);
+		builder.append(", segRoundRobinCity=");
+		builder.append(segRoundRobinCity);
+		builder.append(", segBsgLocator=");
+		builder.append(segBsgLocator);
+		builder.append(", segBookingDateTime=");
+		builder.append(segBookingDateTime);
+		builder.append(", segCreateDateTime=");
+		builder.append(segCreateDateTime);
+		builder.append(", segCancelDateTime=");
+		builder.append(segCancelDateTime);
+		builder.append(", segCodeShare=");
+		builder.append(segCodeShare);
+		builder.append(", segCrsCode=");
+		builder.append(segCrsCode);
+		builder.append(", segAgencyIATANumber=");
+		builder.append(segAgencyIATANumber);
+		builder.append(", segAgencyCityCode=");
+		builder.append(segAgencyCityCode);
+		builder.append(", segCountryCode=");
+		builder.append(segCountryCode);
+		builder.append(", segDutyCode=");
+		builder.append(segDutyCode);
+		builder.append(", segMarketingAirline=");
+		builder.append(segMarketingAirline);
+		builder.append(", segOperatingAirline=");
+		builder.append(segOperatingAirline);
+		builder.append(", segMarketingClass=");
+		builder.append(segMarketingClass);
+		builder.append(", segOperatingClass=");
+		builder.append(segOperatingClass);
+		builder.append(", segMarketingFlightNbr=");
+		builder.append(segMarketingFlightNbr);
+		builder.append(", segOperatingFlightNbr=");
+		builder.append(segOperatingFlightNbr);
+		builder.append(", segKlDateTime=");
+		builder.append(segKlDateTime);
+		builder.append(", segObDateTime=");
+		builder.append(segObDateTime);
+		builder.append(", segLastUpdate=");
+		builder.append(segLastUpdate);
+		builder.append(", segDepartureDateTime=");
+		builder.append(segDepartureDateTime);
+		builder.append(", segArrivalDateTime=");
+		builder.append(segArrivalDateTime);
+		builder.append(", segBkgAAACityCode=");
+		builder.append(segBkgAAACityCode);
+		builder.append(", segBkgHomeStaCityCode=");
+		builder.append(segBkgHomeStaCityCode);
+		builder.append(", segBkgDutyCode=");
+		builder.append(segBkgDutyCode);
+		builder.append(", segBkgAgentSine=");
+		builder.append(segBkgAgentSine);
+		builder.append(", segBkgPltOfficeDesignator=");
+		builder.append(segBkgPltOfficeDesignator);
+		builder.append(", segBkgCrsCode=");
+		builder.append(segBkgCrsCode);
+		builder.append(", segCurrentAAACityCode=");
+		builder.append(segCurrentAAACityCode);
+		builder.append(", segCurrentHomeStaCityCode=");
+		builder.append(segCurrentHomeStaCityCode);
+		builder.append(", segCurrentAgentSine=");
+		builder.append(segCurrentAgentSine);
+		builder.append(", segCurrentDutyCode=");
+		builder.append(segCurrentDutyCode);
+		builder.append(", segCurrentPltOfficeDesignator=");
+		builder.append(segCurrentPltOfficeDesignator);
+		builder.append(", segCurrentCrsCode=");
+		builder.append(segCurrentCrsCode);
+		builder.append(", segCancelAAACityCode=");
+		builder.append(segCancelAAACityCode);
+		builder.append(", segCancelHomeStaCityCode=");
+		builder.append(segCancelHomeStaCityCode);
+		builder.append(", segCancelAgentSine=");
+		builder.append(segCancelAgentSine);
+		builder.append(", segCancelDutyCode=");
+		builder.append(segCancelDutyCode);
+		builder.append(", segCancelPltOfficeDesignator=");
+		builder.append(segCancelPltOfficeDesignator);
+		builder.append(", segCancelCrsCode=");
+		builder.append(segCancelCrsCode);
+		builder.append(", segBkgReceivedFrom=");
+		builder.append(segBkgReceivedFrom);
+		builder.append(", segCurrentReceivedFrom=");
+		builder.append(segCurrentReceivedFrom);
+		builder.append(", segCancelReceivedFrom=");
+		builder.append(segCancelReceivedFrom);
+		builder.append(", segCopiedFromParent=");
+		builder.append(segCopiedFromParent);
+		builder.append(", segDepartureDateTimeGMT=");
+		builder.append(segDepartureDateTimeGMT);
+		builder.append(", segArrivalDateTimeGMT=");
+		builder.append(segArrivalDateTimeGMT);
+		builder.append(", segMarriedSegment=");
+		builder.append(segMarriedSegment);
+		builder.append(", segFqtuSSR=");
+		builder.append(segFqtuSSR);
+		builder.append(", segIrssSSR=");
+		builder.append(segIrssSSR);
+		builder.append(", segTripDepartureDate=");
+		builder.append(segTripDepartureDate);
+		builder.append(", segTripBoard=");
+		builder.append(segTripBoard);
+		builder.append(", segTripOff=");
+		builder.append(segTripOff);
+		builder.append(", segInline=");
+		builder.append(segInline);
+		builder.append(", segOnline=");
+		builder.append(segOnline);
+		builder.append(", segOffline=");
+		builder.append(segOffline);
+		builder.append(", segUniqueId=");
+		builder.append(segUniqueId);
+		builder.append(", segOriginalFare=");
+		builder.append(segOriginalFare);
+		builder.append(", segEffectiveBidPrice=");
+		builder.append(segEffectiveBidPrice);
+		builder.append(", segAdjustedFare=");
+		builder.append(segAdjustedFare);
+		builder.append(", segAdjustedBidPrice=");
+		builder.append(segAdjustedBidPrice);
+		builder.append(", segFootprintFareClass=");
+		builder.append(segFootprintFareClass);
+		builder.append(", segLowestAvailFareClass=");
+		builder.append(segLowestAvailFareClass);
+		builder.append(", segPointOfCommencement=");
+		builder.append(segPointOfCommencement);
+		builder.append(", segCustomerScore=");
+		builder.append(segCustomerScore);
+		builder.append(", segAdditionalFlag=");
+		builder.append(segAdditionalFlag);
+		builder.append(", segAdditionalData=");
+		builder.append(segAdditionalData);
+		builder.append(", segTierLevel=");
+		builder.append(segTierLevel);
+		builder.append(", segSupplierCode=");
+		builder.append(segSupplierCode);
+		builder.append(", segMarketTypeOrigin=");
+		builder.append(segMarketTypeOrigin);
+		builder.append(", segMarketTypeOriginLevel=");
+		builder.append(segMarketTypeOriginLevel);
+		builder.append(", segMarketTypeDestination=");
+		builder.append(segMarketTypeDestination);
+		builder.append(", segMarketTypeDestinationLevel=");
+		builder.append(segMarketTypeDestinationLevel);
+		builder.append(", segTripMarketOrigin=");
+		builder.append(segTripMarketOrigin);
+		builder.append(", segTripMarketOriginLevel=");
+		builder.append(segTripMarketOriginLevel);
+		builder.append(", segTripMarketDestination=");
+		builder.append(segTripMarketDestination);
+		builder.append(", segTripMarketDestinationLevel=");
+		builder.append(segTripMarketDestinationLevel);
+		builder.append(", segFareMarketOrigin=");
+		builder.append(segFareMarketOrigin);
+		builder.append(", segFareMarketOriginLevel=");
+		builder.append(segFareMarketOriginLevel);
+		builder.append(", segFareMarketDestination=");
+		builder.append(segFareMarketDestination);
+		builder.append(", segFareMarketDestinationLevel=");
+		builder.append(segFareMarketDestinationLevel);
+		builder.append(", segRegularFareType=");
+		builder.append(segRegularFareType);
+		builder.append(", segSponsorFareType=");
+		builder.append(segSponsorFareType);
+		builder.append(", segDefaultFareType=");
+		builder.append(segDefaultFareType);
+		builder.append(", segSponsorDefault=");
+		builder.append(segSponsorDefault);
+		builder.append(", segHostDefault=");
+		builder.append(segHostDefault);
+		builder.append(", segDefaultEvaluationType=");
+		builder.append(segDefaultEvaluationType);
+		builder.append(", segSumOfLocals=");
+		builder.append(segSumOfLocals);
+		builder.append(", segTrueOD=");
+		builder.append(segTrueOD);
+		builder.append(", segLongestSegmentFare=");
+		builder.append(segLongestSegmentFare);
+		builder.append(", segDominantSegmentFare=");
+		builder.append(segDominantSegmentFare);
+		builder.append(", segLocal=");
+		builder.append(segLocal);
+		builder.append(", segFinancial=");
+		builder.append(segFinancial);
+		builder.append(", segPhysical=");
+		builder.append(segPhysical);
+		builder.append(", segForcedSell=");
+		builder.append(segForcedSell);
+		builder.append(", segSchedChg=");
+		builder.append(segSchedChg);
+		builder.append(", segForcedPartialCancel=");
+		builder.append(segForcedPartialCancel);
+		builder.append(", segTtyRejectAgent=");
+		builder.append(segTtyRejectAgent);
+		builder.append(", segTtyTransaction=");
+		builder.append(segTtyTransaction);
+		builder.append("]");
+		return builder.toString();
+	}
+	
+	
 	
 
 	
-	@Override
-	public String toString() {
-		return new StringBuffer().
-		append("PNRSegment[").
-		//append(id).append(",").
-		//append(pnr).append(",").
-		//append(segment).append(",").
-		append(segFareClass).append(",").
-		append(segSabreNumberInParty).append(",").
-		append(segStatusCode).append(",").
-		append(segPrevStatusCode).append(",").
-		append(segActive).append(",").
-		append(SeqConverter.sDate2String(segDepartureDateTime)).append(",").
-		append(SeqConverter.sDate2String(segArrivalDateTime)).append(",").
-		append(SeqConverter.sDate2String(segBookingDateTime)).append(",").
-		append(segInbound).append(",").
-		append(segOutbound).append(",").
-		append(segSequence).append(",").
-		append(segMarketingAirline).append(",").
-		append(segCodeShare).
-		append("]").
-		toString();
-	}
+	/*
+	 * @Override public String toString() { return new StringBuffer().
+	 * append("PNRSegment["). append(id).append(",").
+	 * append(segAirline).append(","). append(segDepartureDate).append(",").
+	 * append(segFlightNumber).append(","). append(segBoard).append(",").
+	 * append(segOff).append(","). append(segFareClass).append(",").
+	 * append(segSabreNumberInParty).append(","). append(segStatusCode).append(",").
+	 * append(segPrevStatusCode).append(","). append(segActive).append(",").
+	 * append(SeqConverter.sDate2String(segDepartureDateTime)).append(",").
+	 * append(SeqConverter.sDate2String(segArrivalDateTime)).append(",").
+	 * append(SeqConverter.sDate2String(segBookingDateTime)).append(",").
+	 * append(segInbound).append(","). append(segOutbound).append(",").
+	 * append(segSequence).append(","). append(segMarketingAirline).append(",").
+	 * append(segCodeShare). append("]"). toString(); }
+	 */	
+	
 	
 	
 	
